@@ -1,27 +1,30 @@
-const audio = document.getElementById("background-music");
-const volumeSlider = document.getElementById("volume-slider");
-const volumeIcon   = document.getElementById("volume-icon");
 
-function setVolume(val) {
-  audio.muted = false;
-  audio.volume = val;
-  updateIcon();
-}
+const audio = document.getElementById("background-music");
+const icon = document.getElementById("volume-icon");
+const slider = document.getElementById("volume-slider");
+
+let isFirstClick = true;
 
 function toggleMute() {
-  const audio = document.getElementById("background-music");
-  const icon = document.getElementById("volume-icon");
+    if (isFirstClick) {
+      audio.play();
+      isFirstClick = false;
+    }
 
-  audio.muted = !audio.muted;
+    audio.muted = !audio.muted;
 
-  if (audio.muted) {
-    icon.classList.remove("fa-volume-up");
-    icon.classList.add("fa-volume-mute");
-  } else {
-    icon.classList.remove("fa-volume-mute");
-    icon.classList.add("fa-volume-up");
+    if (audio.muted) {
+      icon.classList.remove("fa-volume-up");
+      icon.classList.add("fa-volume-mute");
+    } else {
+      icon.classList.remove("fa-volume-mute");
+      icon.classList.add("fa-volume-up");
+    }
   }
-}
+
+  function setVolume(value) {
+    audio.volume = value;
+  }
 
 function updateIcon() {
   if (audio.muted || audio.volume == 0) {
