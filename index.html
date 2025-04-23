@@ -19,28 +19,25 @@
     </div>
   </div>
   <img src="guilty.gif" class="background-gif" alt="background gif">
-  <audio id="background-music" loop autoplay>
-    <source src="fortresseurope.mp3" type="audio/mp3">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
-  <div class="volume-control">
-    <a
-      href="#mute"
-      id="mute-button"
-      onclick="toggleMute(); return false;"
-    >
-      <i id="volume-icon" class="fas fa-volume-mute"></i>
-    </a>
-    <input
-      type="range"
-      id="volume-slider"
-      min="0"
-      max="1"
-      step="0.01"
-      value="1"
-      onchange="setVolume(this.value)"
-    />
-  </div>
+  <audio id="background-music" loop>
+  <source src="fortresseurope.mp3" type="audio/mp3" />
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<div class="volume-control">
+  <a href="#" id="mute-button" onclick="toggleMute(); return false;">
+    <i id="volume-icon" class="fas fa-volume-mute"></i>
+  </a>
+  <input
+    type="range"
+    id="volume-slider"
+    min="0"
+    max="1"
+    step="0.01"
+    value="1"
+    onchange="setVolume(this.value)"
+  />
+</div>
   <script src="script.js"></script>
 </body>
 </html>
