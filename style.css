@@ -17,6 +17,7 @@
     background: black;
   }
   .background-gif {
+    background-image: url("guilty.gif");  
     position: fixed;
     top: 50%;
     left: 50%;
