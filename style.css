@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: black;
+  }
+  .background-gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%) scale(0.98);
+    object-fit: contain;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+    
+  .hud {
+    background: black;
+    padding: 30px 50px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    animation: rgbBorder 3s infinite;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  }
+  
+  @keyframes rgbBorder {
+    0% { border-color: red; }
+    33% { border-color: lime; }
+    66% { border-color: blue; }
+    100% { border-color: red; }
+  }
+  
+  .hud h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .slogan {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #aaa;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .volume-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .volume-control a {
+    text-decoration: none;
+    margin-right: 8px;
+  }
+  
+  #volume-icon {
+    color: white !important;
+    font-size: 24px !important;
+    pointer-events: none;
+  }
+  
+  #volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  #volume-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }  

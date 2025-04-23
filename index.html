@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>João Guilherme</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="hud">
+    <h1>João Guilherme</h1>
+    <p class="slogan">Big Heart, Small Codes</p>
+    <div class="social-icons">
+      <a href="https://github.com/guiiwty" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/guiiltyzxc/?hl=pt-br" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/jguiilty30/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:jguii3006@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <img src="C:/Users/rober/Documents/site_guilty/guilty.gif" class="background-gif" alt="background gif">
+  <audio id="background-music" loop autoplay>
+    <source src="C:\Users\rober\Documents\site_guilty\fortresseurope.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <audio
+    id="background-music"
+    src="C:\Users\rober\Documents\site_guilty\fortresseurope.mp3"
+    autoplay
+    loop
+    muted
+  ></audio>
+
+  <div class="volume-control">
+    <a
+      href="#mute"
+      id="mute-button"
+      onclick="toggleMute(); return false;"
+    >
+      <i id="volume-icon" class="fas fa-volume-mute"></i>
+    </a>
+    <input
+      type="range"
+      id="volume-slider"
+      min="0"
+      max="1"
+      step="0.01"
+      value="1"
+      onchange="setVolume(this.value)"
+    />
+  </div>
+  <script src="C:\Users\rober\Documents\site_guilty\script.js"></script>
+</body>
+</html>
