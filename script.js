@@ -9,10 +9,18 @@ function setVolume(val) {
 }
 
 function toggleMute() {
+  const audio = document.getElementById("background-music");
+  const icon = document.getElementById("volume-icon");
+
   audio.muted = !audio.muted;
-  if (audio.muted) volumeSlider.value = 0;
-  else volumeSlider.value = audio.volume;
-  updateIcon();
+
+  if (audio.muted) {
+    icon.classList.remove("fa-volume-up");
+    icon.classList.add("fa-volume-mute");
+  } else {
+    icon.classList.remove("fa-volume-mute");
+    icon.classList.add("fa-volume-up");
+  }
 }
 
 function updateIcon() {
